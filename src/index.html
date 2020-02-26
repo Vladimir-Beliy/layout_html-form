@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>HTML Form</title>
   <link rel="stylesheet" href="./style.css">
@@ -12,86 +11,62 @@
   <form action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="POST">
     <fieldset class="form-block">
       <legend>Personal information</legend>
-      <div class="input-data">
-        <label for="surname">Surname:</label>
-        <input type="text" id="surname" name="surname" autocomplete="off">
-      </div>
-      <div class="input-data">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" autocomplete="off">
-      </div>
-      <div class="input-data">
-        <label for="age">How old are You?</label>
-        <input type="number" id="age" name="age" min="12" max="100" value="12">
-      </div>
-      <div class="input-data">
-        <label for="date-of-birth">Full date of birth:</label>
-        <input type="date" id="date-of-birth" name="date-of-birth">
-      </div>
-      <div class="input-data last-in-block">
-        <label for="agreement">I accept the term of the agreement</label>
-        <input type="checkbox" id="agreement" name="agreement" required>
-      </div>
+      <label class="input-data">
+        Surname:<input type="text" name="surname" autocomplete="off"></label>
+      <label class="input-data">
+        Name:<input type="text" name="name" autocomplete="off"></label>
+      <label class="input-data">
+        How old are You?<input type="number" name="age" min="12" max="100" value="12"></label>
+      <label class="input-data">
+        Full date of birth:<input type="date" name="date-of-birth"></label>
+      <label class="input-data last-in-block">
+        I accept the term of the agreement<input type="checkbox" name="agreement" required></label>
     </fieldset>
 
     <fieldset class="form-block">
       <legend>Registration</legend>
-      <div class="input-data">
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" placeholder="email@example.com" required>
-      </div>
-      <div class="input-data last-in-block">
-        <label for="pass">Password:</label>
-        <input type="password" id="pass" name="password" minlength="8" maxlength="16" required>
-      </div>
+      <label class="input-data">
+        E-mail:<input type="email" name="email" placeholder="email@example.com" required></label>
+      <label class="input-data last-in-block">
+        Password:<input type="password" name="password" minlength="8" maxlength="16" required></label>
     </fieldset>
 
     <fieldset class="form-block">
       <legend>An interesting fact about you!</legend>
       <div class="input-data">
         Do you love cats?
-        <input type="radio" id="cat-yes" name="love-cats" value="cat-yes">
-        <label for="cat-yes">Yes</label>
-        <input type="radio" id="cat-no" name="love-cats" value="cat-no">
-        <label for="cat-no">No</label>
+        <label><input type="radio" name="love-cats" value="cat-yes">Yes</label>
+        <label><input type="radio" name="love-cats" value="cat-no">No</label>
       </div>
-      <div class="input-data">
-        <label for="favorite-color">What is your favorite-color?</label>
-        <input type="color" id="favorite-color" name="favorite-color" value="#000">
-      </div>
-      <div class="input-data">
-        <label for="go-to-bed">What time do you go to bed?</label>
-        <input type="time" id="go-to-bed" name="go-to-bed" step="2">
-      </div>
-      <div class="input-data">
-        <label for="favorite-car">What are your favorite brand of cars?</label>
-        <select name="favorite-car" id="favorite-car" multiple>
+      <label class="input-data">
+        What is your favorite-color?<input type="color" name="favorite-color" value="#000"></label>
+      <label class="input-data">
+        What time do you go to bed?<input type="time" name="go-to-bed" step="2"></label>
+      <label class="input-data">
+        What are your favorite brand of cars?
+        <select name="favorite-car" multiple>
           <option value="bmw">BMW</option>
           <option value="audi">Audi</option>
           <option value="Lada">Lada</option>
         </select>
-      </div>
-      <div class="input-data last-in-block">
-        <label for="rate-work">How do you rate our work?</label>
-        <input type="range" id="rate-work" name="rate-work" min="1" max="100">
-      </div>
+      </label>
+      <label class="input-data last-in-block">
+        How do you rate our work?<input type="range" name="rate-work" min="1" max="100"></label>
     </fieldset>
 
     <fieldset class="form-block">
       <legend>Additional info:</legend>
-      <div class="input-data">
-        <label for="comments">Comments:</label>
-        <textarea id="comments" name="comments"></textarea>
-      </div>
-      <div class="input-data last-in-block">
-        <label for="recommend-us">Would you recommend us?</label>
-        <select name="recommend-us" id="recommend-us">
+      <label class="input-data">
+        Comments:<textarea name="comments"></textarea></label>
+      <label class="input-data last-in-block">
+        Would you recommend us?
+        <select name="recommend-us">
           <option value="yes">Yes</option>
           <option value="no">No</option>
         </select>
-      </div>
+      </label>
     </fieldset>
-    <button type="submit" onsubmit="onSubmit()">Submit</button>
+    <input type="submit" name="submit" value="Submit" onsubmit="onSubmit()">
   </form>
   <script type="text/javascript" src="./main.js"></script>
 </body>
